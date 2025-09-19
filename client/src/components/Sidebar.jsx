@@ -1,5 +1,6 @@
 import React from 'react';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton, Tooltip } from '@mui/material';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Home, Logout, Menu } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { Divider } from '@mui/material'
@@ -43,6 +44,15 @@ export default function Sidebar({ open, setOpen }) {
           {open && <ListItemText primary="Home" />}
         </ListItem>
 
+        <ListItem button onClick={() => navigate('/tasks')}>
+          <Tooltip title="Tasks" placement="right" disableHoverListener={open}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+          </Tooltip>
+          {open && <ListItemText primary="Tasks" />}
+        </ListItem>
+
         <Divider sx={{ my: 1 }} />
 
         <ListItem button onClick={() => navigate('/login')}>
@@ -51,7 +61,7 @@ export default function Sidebar({ open, setOpen }) {
               <Logout />
             </ListItemIcon>
           </Tooltip>
-          {open && <ListItemText primary="Logout" />}
+          {open && <ListItemText primary="Logout" secondary="enitha.it23@bitsathy.ac.in" />}
         </ListItem>
       </List>
     </Drawer>

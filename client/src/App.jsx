@@ -4,7 +4,8 @@ import Sidebar from './components/Sidebar.jsx';
 import Navbar from './components/Navbar.jsx';
 import ThemeProvider from './components/ThemeProvider.jsx';
 import Home from './components/Home.jsx';
-import Logout from './components/Logout.jsx';
+import Login from './components/Login.jsx';
+import Tasks from './components/Tasks.jsx';
 
 function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -29,8 +30,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="logout" element={<Logout />} />
+            <Route path="/tasks" element={<Tasks />} />
           </Route>
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </ThemeProvider>

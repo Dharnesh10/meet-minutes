@@ -14,6 +14,19 @@ export default function ThemeProvider({ children }) {
         palette: {
           mode,
         },
+        typography: {
+          fontFamily: `'Inter', sans-serif`, // GLOBAL FONT
+          h6: {
+            fontWeight: 600,
+          },
+          body1: {
+            fontWeight: 400,
+          },
+          body2: {
+            fontWeight: 400,
+            color: mode === 'light' ? '#666' : '#bbb', // muted text for light/dark mode
+          },
+        },
       }),
     [mode]
   );
