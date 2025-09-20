@@ -28,7 +28,7 @@ export default function Home() {
       img: '/meeting2.png',
     },
     {
-      id: 1,
+      id: 3,
       title: 'Review Meeting',
       dept: 'Students Affairs',
       host: 'Enitha J R',
@@ -39,7 +39,7 @@ export default function Home() {
       img: '/meeting1.png',
     },
     {
-      id: 2,
+      id: 4,
       title: 'Planning Meeting',
       dept: 'Admin',
       host: 'Enitha J R',

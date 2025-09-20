@@ -5,7 +5,11 @@ import Navbar from './components/Navbar.jsx';
 import ThemeProvider from './components/ThemeProvider.jsx';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
-import Tasks from './components/Tasks.jsx';
+import Tasks from './pages/Mytasks.jsx';
+import AssignedTasks from './pages/AssignedTasks.jsx';
+import MeetingDetails from './pages/MeetingDetails.jsx';
+import Minutes from './pages/Minutes.jsx';
+import MyCalendar from './components/Calendar.jsx';
 
 function Layout() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -31,6 +35,10 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/tasks" element={<Tasks />} />
+            <Route path="assigned-tasks" element={<AssignedTasks />} />
+            <Route path="meeting-details" element={<MeetingDetails />} />
+            <Route path="minutes" element={<Minutes />} />
+            <Route path="calendar" element={<MyCalendar />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>

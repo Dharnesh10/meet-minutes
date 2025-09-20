@@ -4,6 +4,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import { Home, Logout, Menu } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { Divider } from '@mui/material'
+import { CalendarToday } from '@mui/icons-material';
 
 export default function Sidebar({ open, setOpen }) {
   const navigate = useNavigate();
@@ -52,6 +53,43 @@ export default function Sidebar({ open, setOpen }) {
           </Tooltip>
           {open && <ListItemText primary="Tasks" />}
         </ListItem>
+
+        <ListItem button onClick={() => navigate('/assigned-tasks')}>
+          <Tooltip title="Assigned Tasks" placement="right" disableHoverListener={open}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+          </Tooltip>
+          {open && <ListItemText primary="Assigned Tasks" />}
+        </ListItem>
+        
+        <ListItem button onClick={() => navigate('/meeting-details')}>
+          <Tooltip title="Meeting Details" placement="right" disableHoverListener={open}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+          </Tooltip>
+          {open && <ListItemText primary="Meeting Details" />}
+        </ListItem>
+
+        <ListItem button onClick={() => navigate('/minutes')}>
+          <Tooltip title="Minutes" placement="right" disableHoverListener={open}>
+            <ListItemIcon>
+              <AssignmentIcon />
+            </ListItemIcon>
+          </Tooltip>
+          {open && <ListItemText primary="Minutes" />}
+        </ListItem>
+
+        <ListItem button onClick={() => navigate('/calendar')}>
+          <Tooltip title="Calendar" placement="right" disableHoverListener={open}>
+            <ListItemIcon>
+              <CalendarToday />
+            </ListItemIcon>
+          </Tooltip>
+          {open && <ListItemText primary="Calendar" />}
+        </ListItem>
+        
 
         <Divider sx={{ my: 1 }} />
 
